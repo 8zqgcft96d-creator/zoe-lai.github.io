@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>性格選擇題</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>快速選擇題</h1>
+      <p class="subtitle">了解你面對新挑戰時的第一反應（單選）</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="quiz-form" class="quiz-card" aria-labelledby="q1">
+      <h2 id="q1">1. 當你遇到一個新的挑戰 / 任務時，你的第一反應是：</h2>
+
+      <fieldset>
+        <legend class="sr-only">選項</legend>
+
+        <label class="option">
+          <input type="radio" name="answer" value="A">
+          <span class="opt-key">A</span>
+          <span class="opt-text">馬上跳進去、先試看看</span>
+        </label>
+
+        <label class="option">
+          <input type="radio" name="answer" value="B">
+          <span class="opt-key">B</span>
+          <span class="opt-text">先觀察環境、研究方式</span>
+        </label>
+
+        <label class="option">
+          <input type="radio" name="answer" value="C">
+          <span class="opt-key">C</span>
+          <span class="opt-text">有點猶豫、怕搞砸、先做部分準備</span>
+        </label>
+
+        <label class="option">
+          <input type="radio" name="answer" value="D">
+          <span class="opt-key">D</span>
+          <span class="opt-text">願意幫助他人、在背後支撐或配合</span>
+        </label>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="submit-btn" class="btn">送出</button>
+        <button type="button" id="reset-btn" class="btn btn-ghost">重設</button>
+      </div>
+
+      <div id="result" class="result" role="status" aria-live="polite" hidden>
+        <!-- 結果會放在這裡 -->
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> 測驗頁面</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
