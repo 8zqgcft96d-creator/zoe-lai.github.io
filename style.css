@@ -92,4 +92,97 @@ fieldset{border:0;padding:0;margin:0}
 .sr-only{
   position:absolute!important;
   height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;
+  /* 小卡 */
+.question-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-family: 'DFKai-SB', '標楷體', serif;
+    color: black;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* 每一個選項 */
+.option {
+    margin: 12px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* 隱藏原生 radio */
+.option input[type="radio"] {
+    display: none;
+}
+
+/* 自製圓圈 */
+.option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-circle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+/* 點選後的實心黑點 */
+.option input[type="radio"]:checked + .radio-circle::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  <div class="question-card" id="question1">
+    <h2>1. 當你遇到新的挑戰 / 任務時，你的第一反應是？</h2>
+
+    <div class="option">
+        <label>
+            <input type="radio" name="q1" value="A" />
+            <span class="radio-circle"></span>
+            (A) 馬上跳進去、先試看看
+        </label>
+    </div>
+
+    <div class="option">
+        <label>
+            <input type="radio" name="q1" value="B" />
+            <span class="radio-circle"></span>
+            (B) 先觀察環境、研究方式
+        </label>
+    </div>
+
+    <div class="option">
+        <label>
+            <input type="radio" name="q1" value="C" />
+            <span class="radio-circle"></span>
+            (C) 有點猶豫、怕搞砸、先做部分準備
+        </label>
+    </div>
+
+    <div class="option">
+        <label>
+            <input type="radio" name="q1" value="D" />
+            <span class="radio-circle"></span>
+            (D) 想幫助他人、在背後支撐或配合
+        </label>
+    </div>
+
+    <button class="nextBtn">下一題</button>
+</div>
+
+}
+
 }
